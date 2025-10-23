@@ -48,6 +48,26 @@ The Candidate Evaluation System is designed to automate the assessment of CVs an
     npm run dev
     ``` 
 
+## How to Ingest RAG Context
+
+1. Ingest the CV and Report Context to ChromaDB 
+
+    ```bash
+    node run src/scripts/ingestDocuments.js
+    ```
+
+2. Check Collection in ChromaDB
+
+    ```bash
+    node run src/scripts/checkCollections.js
+    ```
+
+3. Delete all Collection in ChromaDB
+
+    ```bash
+    node run src/scripts/clearCollections.js
+    ```
+
 ## How to Use the Project
 
 1. **Uploading Documents**
