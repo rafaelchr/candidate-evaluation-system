@@ -1,0 +1,66 @@
+{
+  "rubric_type": "Project Deliverable Evaluation",
+  "scale": "1–5 per parameter",
+  "parameters": [
+    {
+      "name": "Correctness (Prompt & Chaining)",
+      "weight": "30%",
+      "description": "Implements prompt design, LLM chaining, and RAG context injection.",
+      "scoring_guide": {
+        "1": "Not implemented",
+        "2": "Minimal attempt",
+        "3": "Works partially",
+        "4": "Works correctly",
+        "5": "Fully correct + thoughtful implementation"
+      }
+    },
+    {
+      "name": "Code Quality & Structure",
+      "weight": "25%",
+      "description": "Clean, modular, reusable, and tested code.",
+      "scoring_guide": {
+        "1": "Poor",
+        "2": "Some structure",
+        "3": "Decent modularity",
+        "4": "Good structure + some tests",
+        "5": "Excellent quality + strong tests"
+      }
+    },
+    {
+      "name": "Resilience & Error Handling",
+      "weight": "20%",
+      "description": "Handles long jobs, retries, randomness, and API failures.",
+      "scoring_guide": {
+        "1": "Missing",
+        "2": "Minimal handling",
+        "3": "Partial handling",
+        "4": "Solid handling",
+        "5": "Robust, production-ready"
+      }
+    },
+    {
+      "name": "Documentation & Explanation",
+      "weight": "15%",
+      "description": "README clarity, setup instructions, and trade-off explanations.",
+      "scoring_guide": {
+        "1": "Missing",
+        "2": "Minimal",
+        "3": "Adequate",
+        "4": "Clear",
+        "5": "Excellent + insightful"
+      }
+    },
+    {
+      "name": "Creativity / Bonus",
+      "weight": "10%",
+      "description": "Extra features beyond requirements.",
+      "scoring_guide": {
+        "1": "None",
+        "2": "Very basic",
+        "3": "Useful extras",
+        "4": "Strong enhancements",
+        "5": "Outstanding creativity"
+      }
+    }
+  ]
+}

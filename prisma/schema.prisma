@@ -1,0 +1,36 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Document {
+  id        Int      @id @default(autoincrement())
+  type      String 
+  filename  String
+  path      String 
+  createdAt DateTime @default(now())
+
+  evaluatedAsCv     Evaluation[] @relation("Cv")
+  evaluatedAsReport Evaluation[] @relation("Report")
+}
+
+model Evaluation {
+  id                Int       @id @default(autoincrement())
+  candidateCvId     Int
+  candidateReportId Int
+  jobTitle          String
+  status            String    @default("queued") 
+  result            Json?
+  error             String?   @db.Text
+  startedAt         DateTime?
+  createdAt         DateTime  @default(now())
+  finishedAt        DateTime?
+
+  // Relasi
+  Cv     Document @relation("Cv", fields: [candidateCvId], references: [id])
+  Report Document @relation("Report", fields: [candidateReportId], references: [id])
+}

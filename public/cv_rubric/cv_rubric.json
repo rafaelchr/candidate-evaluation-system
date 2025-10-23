@@ -1,0 +1,54 @@
+{
+  "rubric_type": "CV Match Evaluation",
+  "scale": "1-5 per parameter",
+  "parameters": [
+    {
+      "name": "Technical Skills Match",
+      "weight": "40%",
+      "description": "Alignment with job requirements (backend, databases, APIs, cloud, AI/LLM).",
+      "scoring_guide": {
+        "1": "Irrelevant skills",
+        "2": "Few overlaps",
+        "3": "Partial match",
+        "4": "Strong match",
+        "5": "Excellent match + AI/LLM exposure"
+      }
+    },
+    {
+      "name": "Experience Level",
+      "weight": "25%",
+      "description": "Years of experience and project complexity.",
+      "scoring_guide": {
+        "1": "<1 year or trivial projects",
+        "2": "1-2 years experience",
+        "3": "2-3 years with mid-scale projects",
+        "4": "3-4 years solid track record",
+        "5": "5+ years or high-impact projects"
+      }
+    },
+    {
+      "name": "Relevant Achievements",
+      "weight": "20%",
+      "description": "Impact of past work (scaling, performance, adoption).",
+      "scoring_guide": {
+        "1": "No clear achievements",
+        "2": "Minimal improvements",
+        "3": "Some measurable outcomes",
+        "4": "Significant contributions",
+        "5": "Major measurable impact"
+      }
+    },
+    {
+      "name": "Cultural / Collaboration Fit",
+      "weight": "15%",
+      "description": "Communication, learning mindset, teamwork/leadership.",
+      "scoring_guide": {
+        "1": "Not demonstrated",
+        "2": "Minimal",
+        "3": "Average",
+        "4": "Good",
+        "5": "Excellent and well-demonstrated"
+      }
+    }
+  ]
+}
