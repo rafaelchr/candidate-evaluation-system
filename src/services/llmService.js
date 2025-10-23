@@ -6,9 +6,6 @@ const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
-/**
- * Mendefinisikan struktur JSON output yang diinginkan untuk memastikan model mengikutinya. (SCHEMA TETAP SAMA)
- */
 const evaluationSchema = {
   type: Type.OBJECT,
   properties: {
@@ -47,14 +44,6 @@ const evaluationSchema = {
   ],
 };
 
-/**
- * Melakukan evaluasi CV dan Proyek dalam satu panggilan API.
- * * @param {string} cvContent - Isi dari CV kandidat.
- * @param {string} projectReport - Laporan teknis/proyek kandidat.
- * @param {string} jobContext - Deskripsi pekerjaan (job context) untuk acuan CV.
- * @param {string} projectContext - Deskripsi atau requirement proyek untuk acuan evaluasi proyek.
- * @returns {Promise<object>} Objek JSON lengkap sesuai format yang diinginkan.
- */
 export const generateEvaluationResult = async (
   cvContent,
   reportContent,

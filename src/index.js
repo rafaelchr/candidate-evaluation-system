@@ -9,7 +9,6 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// serve uploads as static so you can inspect files
 app.use("/uploads", express.static(path.join(process.cwd(), "public", "uploads")));
 
 app.use("/upload", uploadRouter);

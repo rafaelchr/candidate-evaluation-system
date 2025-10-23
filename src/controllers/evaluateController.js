@@ -11,7 +11,6 @@ export const evaluateCandidate = async (req, res) => {
         .json({ message: "jobTitle, cvId, and projectId are required." });
     }
 
-    // Buat job baru di database
     const job = await prisma.evaluation.create({
       data: {
         jobTitle,

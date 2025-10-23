@@ -32,7 +32,6 @@ const ingestFolder = async (folderPath, collectionName) => {
     const filePath = path.join(folderPath, file);
     let text = fs.readFileSync(filePath, "utf8");
 
-    // jika JSON, ubah ke string
     if (file.endsWith(".json")) {
       text = JSON.stringify(JSON.parse(text), null, 2);
     }
@@ -51,11 +50,9 @@ const ingestFolder = async (folderPath, collectionName) => {
 export const ingestAllSystemDocuments = async () => {
   await clearAllCollections();
 
-  // CV context
   await ingestFolder("public/jobdesc", "cv_context");
   await ingestFolder("public/cv_rubric", "cv_context");
 
-  // Project context
   await ingestFolder("public/casestudy", "project_context");
   await ingestFolder("public/project_rubric", "project_context");
 

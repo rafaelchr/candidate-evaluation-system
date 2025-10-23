@@ -1,5 +1,4 @@
 import prisma from "../db/prismaClient.js";
-import { extractTextFromPdf } from "../services/pdfService.js";
 
 export const uploadPdfFiles = async (req, res) => {
   try {
